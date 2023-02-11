@@ -1,0 +1,15 @@
+* {
+  /* Nicer than default sans-serif font */
+  --sans-serif: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Fira Sans, Ubuntu, Oxygen, Oxygen Sans, Cantarell,
+    Droid Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
+
+  /* Color variables */
+  --background-color: rgba(0, 0, 0, 0.9);
+  --seconday-color: #1d2226;
+}
+
+body {
+  background-color: var(--background-color);
+}
