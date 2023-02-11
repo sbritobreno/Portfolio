@@ -1,3 +1,16 @@
+/*  ============= WEB BROWSER RESETS ============ */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   /* Nicer than default sans-serif font */
   --sans-serif: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -10,6 +23,98 @@
   --seconday-color: #1d2226;
 }
 
+html {
+  height: 100%;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
 body {
+  max-width: 1920px;
+  line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
   background-color: var(--background-color);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* HTML5 container elements full viewport width */
+header,
+section,
+footer {
+  width: 100%;
+}
+
+/* Last element at bottom of header or section */
+header *:last-child,
+section *:last-child,
+footer *:last-child {
+  margin-bottom: 0 !important;
+}
+
+.header-block {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header-bg-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+.header-bg-media img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.header-block h1 {
+  font-size: calc(58px + (72 - 48) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: 24px;
+  line-height: 1.2;
+  color: #ddd;
+}
+
+.header-text-container,
+.container-btn {
+  padding: 3% 10%;
+  z-index: 2;
+}
+
+.header-btn {
+  cursor: pointer;
+  color: #ddd;
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  font-size: calc(18px + (19 - 18) * ((100vw - 320px) / (1920 - 320)));
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--sans-serif);
+  padding: 1% 3%;
+  transition: all 0.3s linear;
+}
+
+.header-btn:hover {
+  background-color: #ddd;
+  color: #000;
 }
