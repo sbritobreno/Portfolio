@@ -19,7 +19,7 @@
     Segoe UI Symbol, Lucida Grande, Helvetica, Arial, sans-serif;
 
   /* Color variables */
-  --background-color: rgba(0, 0, 0, 0.9);
+  --background-color: rgba(0, 0, 0, 0.8);
   --secondary-color: #1d2226;
 }
 
@@ -116,18 +116,48 @@ footer *:last-child {
   color: #000;
 }
 
-/*  ============= Main Container / Recent projects ============ */
+/*  ============= Main Container / About me ============ */
 
 main {
   background-color: var(--background-color);
   padding: 50px 10px;
 }
 
+.aboutme-session {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-inline: 10%;
+  margin-bottom: 60px;
+}
+
+.profile-image {
+  width: 550px;
+  text-align: center;
+  margin-block: auto;
+}
+
+.profile-image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+.aboutme-session .heading {
+  max-width: 750px;
+  text-align: center;
+  border: none;
+}
+
+/*  ============= Main Container / Skills ============ */
+
 .heading {
   text-align: center !important;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 15px;
   max-width: 640px;
   border-top: 2px solid var(--secondary-color);
 }
@@ -140,6 +170,21 @@ main {
   color: #ddd;
   font-weight: bold;
 }
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+  padding-bottom: 40px;
+}
+
+.skill-icon {
+  padding: 5px 30px;
+  font-size: 5em;
+}
+
+/*  ============= Main Container / Recent projects ============ */
 
 .heading h3 {
   font-size: calc(20px + (24 - 20) * ((100vw - 320px) / (1140 - 320)));
@@ -164,7 +209,7 @@ main {
   width: 450px;
   height: 450px;
   background-color: var(--secondary-color);
-  border-radius: 20px;
+  border-radius: 10px;
   margin-top: 2.5em;
   box-shadow: 4px 4px 20px rgb(20 20 20 / 80%);
 }
@@ -176,8 +221,8 @@ main {
 .project-image img {
   width: 100%;
   height: 100%;
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .project-description {
