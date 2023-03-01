@@ -83,6 +83,7 @@ footer *:last-child {
   width: 100%;
   height: 100%;
   border-bottom: 2px solid var(--secondary-color);
+  filter: brightness(50%);
 }
 
 .header-block h1 {
@@ -135,7 +136,7 @@ main {
 }
 
 .profile-image {
-  width: 550px;
+  width: 450px;
   text-align: center;
   margin-block: auto;
 }
@@ -147,9 +148,57 @@ main {
 }
 
 .aboutme-session .heading {
-  max-width: 750px;
+  max-width: 650px;
   text-align: center;
   border: none;
+}
+
+.aboutme-session .heading h2 {
+  margin-top: 0;
+}
+
+.aboutme-session .heading h3 {
+  text-align: left;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .aboutme-session {
+    padding-inline: 0%;
+    margin-bottom: 40px;
+  }
+
+  .profile-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .aboutme-session .heading h2 {
+    margin-top: 10px;
+  }
+
+  .aboutme-session .heading h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutme-session {
+    padding-inline: 0%;
+    margin-bottom: 20px;
+  }
+
+  .profile-image img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .aboutme-session .heading h2 {
+    margin-top: 5px;
+  }
+
+  .aboutme-session .heading h3 {
+    font-size: 20px;
+  }
 }
 
 /*  ============= Main Container / Skills ============ */
@@ -180,10 +229,33 @@ main {
 }
 
 .skill-icon {
-  padding: 5px 30px;
-  font-size: 5em;
+  padding: 5px 20px;
+  font-size: 4.5em;
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .skills-container {
+    margin-top: 0.5em;
+    padding-bottom: 10px;
+  }
+
+  .skill-icon {
+    padding: 5px 15px;
+    font-size: 3.5em;
+  }
+}
+
+@media (max-width: 767px) {
+  .skills-container {
+    margin-top: 0.5em;
+    padding-bottom: 10px;
+  }
+
+  .skill-icon {
+    padding: 5px;
+    font-size: 1.9em;
+  }
+}
 /*  ============= Main Container / Recent projects ============ */
 
 .heading h3 {
@@ -201,13 +273,12 @@ main {
   text-align: center;
   width: 100%;
   height: 100%;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-inline: 4%;
 }
 
 .col-3 {
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 500px;
   background-color: var(--secondary-color);
   border-radius: 10px;
   margin-top: 2.5em;
