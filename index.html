@@ -64,17 +64,14 @@
   </head>
 
   <body>
-    <!-- navigation menu -->
-    <nav class="navbar navbar-sticky"></nav>
-
     <!-- header block -->
-    <header class="header-block">
+    <header class="header-block" id="home">
       <div class="header-text-container">
         <h1>Breno Brito</h1>
         <h1>Full Stack Developer</h1>
       </div>
       <div class="container-btn">
-        <a href="#" class="header-btn">
+        <a href="./contact/index.html" class="header-btn">
           <span>Get in Touch</span>
         </a>
       </div>
@@ -82,6 +79,11 @@
         <img src="assets/img/bg_img.jpg" alt="Placeholder image" />
       </div>
     </header>
+
+    <!-- navigation menu -->
+    <nav class="navbar">
+      <h1>Breno Brito</h1>
+    </nav>
 
     <!-- main content with sections -->
     <main>
@@ -135,7 +137,7 @@
           </div>
         </div>
       </section>
-      <section class="projects-session">
+      <section class="projects-session" id="projects-session">
         <div class="heading">
           <h2>Recent projects</h2>
           <h3>
@@ -167,7 +169,8 @@
             <div class="project-description">
               <h3>RoboFriend</h3>
               <p>
-                A React application that loads Robot data from external public API (jsonplaceholder.typicode.com/users).
+                A React application that loads Robot data from external public
+                API (jsonplaceholder.typicode.com/users).
               </p>
             </div>
             <a href="https://sbritobreno.github.io/RoboFriend/" class="btn"
@@ -180,9 +183,7 @@
             </div>
             <div class="project-description">
               <h3>AmazegAme</h3>
-              <p>
-                A maze game that I have created using Unity and C#.
-              </p>
+              <p>A maze game that I have created using Unity and C#.</p>
             </div>
             <a href="https://github.com/sbritobreno/AmazegAme" class="btn"
               ><span>More...</span></a
@@ -195,7 +196,8 @@
             <div class="project-description">
               <h3>GetAPet</h3>
               <p>
-                A React web application that allows users to put their pets up for adoption and adopt pets online.
+                A React web application that allows users to put their pets up
+                for adoption and adopt pets online.
               </p>
             </div>
             <a href="https://github.com/sbritobreno/GetAPet" class="btn"
@@ -209,7 +211,8 @@
             <div class="project-description">
               <h3>SmartBrain</h3>
               <p>
-                A React web application that uses a third-party API that recognizes faces on an uploaded image.
+                A React web application that uses a third-party API that
+                recognizes faces on an uploaded image.
               </p>
             </div>
             <a href="https://sbritobreno.github.io/SmartBrain/" class="btn"
@@ -223,7 +226,8 @@
             <div class="project-description">
               <h3>Thoughts</h3>
               <p>
-                A Node.js/Express/Handlebars application created using MVC architecture, this app posts users' thoughts.
+                A Node.js/Express/Handlebars application created using MVC
+                architecture, this app posts users' thoughts.
               </p>
             </div>
             <a href="https://github.com/sbritobreno/Thoughts" class="btn"
@@ -232,15 +236,31 @@
           </div>
           <div class="col-3">
             <div class="project-image">
-              <img src="assets/img/Seeking4Sports.png" alt="Seeking4Sports" />
+              <img src="assets/img/seeking4sports.png" alt="Seeking4Sports" />
             </div>
             <div class="project-description">
               <h3>Seeking4Sports</h3>
               <p>
-                A React/Node.js/MySQL application that allows users to register and either create sport activities or join existent groups.
+                A React/Node.js/MySQL application that allows users to register
+                and either create sport activities or join existent groups.
               </p>
             </div>
-            <a href="http://seeking4sports.ie/" class="btn"
+            <a href="https://seeking4sports.netlify.app/" class="btn"
+              ><span>More...</span></a
+            >
+          </div>
+          <div class="col-3">
+            <div class="project-image">
+              <img src="assets/img/forkify.png" alt="Forkify" />
+            </div>
+            <div class="project-description">
+              <h3>Forkify</h3>
+              <p>
+                A web JavaScript/HTML/CSS application that loads recipes from an
+                external API, and also allow users to create their own recipes.
+              </p>
+            </div>
+            <a href="https://forkify-sbritobreno.netlify.app/" class="btn"
               ><span>More...</span></a
             >
           </div>
@@ -253,9 +273,9 @@
       <h2>Breno Brito</h2>
       <h3>Let's make something great together!</h3>
       <ul class="footer-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects-session">Portfolio</a></li>
+        <li><a href="./contact/index.html">Contact</a></li>
       </ul>
       <ul class="footer-icons">
         <li>
