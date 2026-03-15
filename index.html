@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -17,307 +17,249 @@
     </script>
 
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Breno Brito | Full Stack Dev</title>
+
+    <title>Breno Brito | Full Stack Developer</title>
+
     <meta
       name="description"
-      content="I create digital experiences to promote products, services and events."
+      content="Portfolio of Breno Brito - Full Stack Developer"
     />
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 
-    <!-- Google Fonts -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
-    <!-- Devicon icons -->
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      rel="stylesheet"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous"
-    />
-
-    <!-- Font Awesome 5 icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
-    />
-
-    <!-- Light Awesome icons -->
-    <link
-      rel="stylesheet"
-      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
-    />
-
-    <!-- Google Material Design Icons -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
 
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
 
   <body>
-    <!-- header block -->
-    <header class="header-block fade-in" id="home">
-      <div class="header-text-container">
-        <h1>Breno Brito</h1>
-        <h1>Full Stack Developer</h1>
-      </div>
-      <div class="container-btn">
-        <a href="./contact/index.html" class="header-btn">
-          <span>Get in Touch</span>
-        </a>
-      </div>
-      <div class="header-bg-media">
-        <img src="assets/img/bg_img.jpg" alt="background image" />
+    <!-- HACKER GRID BACKGROUND -->
+    <canvas id="gridCanvas"></canvas>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">sbritobreno.dev</div>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO / TERMINAL -->
+    <header class="hero" id="home">
+      <div class="terminal" data-animate="fade-up">
+        <div class="terminal-body"></div>
+        <button id="contactBtn" class="cta-btn">Contact Me</button>
       </div>
     </header>
 
-    <!-- main content with sections -->
-    <main>
-      <section class="aboutme-session">
-        <div class="profile-image">
-          <img src="assets/img/profile-img.jpg" alt="profile-img" />
-        </div>
-        <div class="heading">
-          <h2>About Me</h2>
-          <h3>
-            I am a highly motivated and enthusiastic Computing Science student
-            with a strong interest in computer architecture, web development,
-            and the latest technology. My studies have led me to gain a thorough
-            understanding of computer hardware, software, networking, and
-            programming languages. I am a quick learner and I am eager to apply
-            my knowledge and skills to the real world. I am organized, highly
-            detail-oriented, and I am able to work independently and
-            collaboratively to achieve success. I am a problem solver and can
-            work on independently to troubleshoot and solve technical issues.
-          </h3>
-        </div>
-      </section>
-      <section class="skills-session">
-        <div class="heading">
-          <h2>Skills</h2>
-        </div>
-        <div class="skills-container">
-          <div class="skill-icon">
-            <i class="devicon-html5-plain-wordmark colored"></i>
-          </div>
-          <div class="skill-icon">
-            <i class="devicon-css3-plain-wordmark colored"></i>
-          </div>
-          <div class="skill-icon">
-            <i class="devicon-javascript-plain colored"></i>
-          </div>
-          <div class="skill-icon">
-            <i class="devicon-react-original-wordmark colored"></i>
-          </div>
-          <div class="skill-icon">
-            <i class="devicon-nodejs-plain-wordmark colored"></i>
-          </div>
-          <div class="skill-icon">
-            <i class="devicon-mysql-plain-wordmark colored"></i>
-          </div>
-          <div class="skill-icon">
-            <i class="devicon-csharp-plain-wordmark colored"></i>
-          </div>
-          <div class="skill-icon">
-            <i class="devicon-git-plain colored"></i>
-          </div>
-        </div>
-      </section>
-      <section class="projects-session" id="projects-session">
-        <div class="heading">
-          <h2>Recent projects</h2>
-          <h3>
-            Below you can see some examples of my recent work. Check out my
-            complete portfolio.
-          </h3>
-        </div>
-        <div class="container-flex">
-          <div class="col-3">
-            <div class="project-image">
-              <img src="assets/img/mapty.png" alt="Mapty" />
-            </div>
-            <div class="project-description">
-              <h3>Mapty</h3>
-              <p>
-                A web JavaScript/HTML/CSS application that creates workout
-                activities for cycling and running, using a map library from
-                leaflet.js.
-              </p>
-            </div>
-            <a href="https://sbritobreno.github.io/Mapty/" class="btn"
-              ><span>More...</span></a
-            >
-          </div>
-          <div class="col-3">
-            <div class="project-image">
-              <img src="assets/img/robofriend.png" alt="RoboFriend" />
-            </div>
-            <div class="project-description">
-              <h3>RoboFriend</h3>
-              <p>
-                A React application that loads Robot data from external public
-                API (jsonplaceholder.typicode.com/users).
-              </p>
-            </div>
-            <a href="https://sbritobreno.github.io/RoboFriend/" class="btn"
-              ><span>More...</span></a
-            >
-          </div>
-          <div class="col-3">
-            <div class="project-image">
-              <img src="assets/img/AmazegAme.png" alt="AmazegAme" />
-            </div>
-            <div class="project-description">
-              <h3>AmazegAme</h3>
-              <p>A maze game that I have created using Unity and C#.</p>
-            </div>
-            <a href="https://github.com/sbritobreno/AmazegAme" class="btn"
-              ><span>More...</span></a
-            >
-          </div>
-          <div class="col-3">
-            <div class="project-image">
-              <img src="assets/img/GetAPet.png" alt="GetAPet" />
-            </div>
-            <div class="project-description">
-              <h3>GetAPet</h3>
-              <p>
-                A React web application that allows users to put their pets up
-                for adoption and adopt pets online.
-              </p>
-            </div>
-            <a href="https://github.com/sbritobreno/GetAPet" class="btn"
-              ><span>More...</span></a
-            >
-          </div>
-          <div class="col-3">
-            <div class="project-image">
-              <img src="assets/img/SmartBrain.png" alt="SmartBrain" />
-            </div>
-            <div class="project-description">
-              <h3>SmartBrain</h3>
-              <p>
-                A React web application that uses a third-party API that
-                recognizes faces on an uploaded image.
-              </p>
-            </div>
-            <a href="https://sbritobreno.github.io/SmartBrain/" class="btn"
-              ><span>More...</span></a
-            >
-          </div>
-          <div class="col-3">
-            <div class="project-image">
-              <img src="assets/img/Thoughts.png" alt="Thoughts" />
-            </div>
-            <div class="project-description">
-              <h3>Thoughts</h3>
-              <p>
-                A Node.js/Express/Handlebars application created using MVC
-                architecture, this app posts users' thoughts.
-              </p>
-            </div>
-            <a href="https://github.com/sbritobreno/Thoughts" class="btn"
-              ><span>More...</span></a
-            >
-          </div>
-          <div class="col-3">
-            <div class="project-image">
-              <img src="assets/img/Seeking4Sports.png" alt="Seeking4Sports" />
-            </div>
-            <div class="project-description">
-              <h3>Seeking4Sports</h3>
-              <p>
-                A React/Node.js/MySQL application that allows users to register
-                and either create sport activities or join existent groups.
-              </p>
-            </div>
-            <a href="https://seeking4sports.netlify.app/" class="btn"
-              ><span>More...</span></a
-            >
-          </div>
-          <div class="col-3">
-            <div class="project-image">
-              <img src="assets/img/forkify.png" alt="Forkify" />
-            </div>
-            <div class="project-description">
-              <h3>Forkify</h3>
-              <p>
-                A web JavaScript/HTML/CSS application that loads recipes from an
-                external API, and also allow users to create their own recipes.
-              </p>
-            </div>
-            <a href="https://forkify-sbritobreno.netlify.app/" class="btn"
-              ><span>More...</span></a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
+    <!-- ABOUT -->
+    <section id="about" class="section about-container" data-animate="fade-up">
+      <div class="about-image">
+        <img src="assets/images/profile.jpg" alt="Breno Brito" />
+      </div>
 
-    <!-- footer -->
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am a highly motivated and enthusiastic Computing Science student
+          with a strong interest in computer architecture, web development, and
+          emerging technologies.
+        </p>
+        <p>
+          My studies have helped me develop a strong understanding of software
+          development, networking, programming, and system design.
+        </p>
+        <p>
+          I enjoy building modern applications, learning new technologies, and
+          solving complex technical problems.
+        </p>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section" data-animate="fade-up">
+      <h2>Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill"><i class="fab fa-html5"></i> HTML</div>
+        <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
+        <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+        <div class="skill"><i class="fab fa-react"></i> React</div>
+        <div class="skill"><i class="fab fa-node"></i> Node.js</div>
+        <div class="skill"><i class="fas fa-database"></i> MySQL</div>
+        <div class="skill"><i class="fab fa-git-alt"></i> Git</div>
+        <div class="skill"><i class="fab fa-github"></i> GitHub</div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="section" data-animate="fade-up">
+      <h2>Certifications</h2>
+
+      <div class="cert-grid">
+        <div class="cert">
+          <h3>Full Stack Web Development</h3>
+          <p>Udemy</p>
+        </div>
+
+        <div class="cert">
+          <h3>JavaScript Algorithms & Data Structures</h3>
+          <p>freeCodeCamp</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="portfolio" class="section" data-animate="fade-up">
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Project cards with data-animate for scroll reveal -->
+        <div class="project" data-animate="fade-up">
+          <img src="assets/images/mapty.png" alt="Mapty" />
+          <h3>Mapty</h3>
+          <p>Workout tracking web app using Leaflet.js and JavaScript.</p>
+          <a href="https://sbritobreno.github.io/Mapty/" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <div class="project" data-animate="fade-up">
+          <img src="assets/images/robofriend.png" alt="RoboFriend" />
+          <h3>RoboFriend</h3>
+          <p>React application that loads robot data from a public API.</p>
+          <a href="https://sbritobreno.github.io/RoboFriend/" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <div class="project" data-animate="fade-up">
+          <img src="assets/images/amazegame.png" alt="AmazegAme" />
+          <h3>AmazegAme</h3>
+          <p>3D Game built with Unity and C#.</p>
+          <a href="https://github.com/sbritobreno/AmazegAme" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <div class="project" data-animate="fade-up">
+          <img src="assets/images/getapet.png" alt="GetAPet" />
+          <h3>GetAPet</h3>
+          <p>React and Node.js pet adoption platform.</p>
+          <a href="https://github.com/sbritobreno/GetAPet" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <div class="project" data-animate="fade-up">
+          <img src="assets/images/smartbrain.png" alt="SmartBrain" />
+          <h3>SmartBrain</h3>
+          <p>Face recognition web app using external API.</p>
+          <a href="https://sbritobreno.github.io/SmartBrain/" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <div class="project" data-animate="fade-up">
+          <img src="assets/images/thoughts.png" alt="Thoughts" />
+          <h3>Thoughts</h3>
+          <p>Node.js MVC application for sharing user posts.</p>
+          <a href="https://github.com/sbritobreno/Thoughts" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <div class="project" data-animate="fade-up">
+          <img src="assets/images/seeking4sports.png" alt="Seeking4Sports" />
+          <h3>Seeking4Sports</h3>
+          <p>React + Node.js + MySQL platform for sports activities.</p>
+          <a href="https://seeking4sports.netlify.app/" target="_blank"
+            >View Project</a
+          >
+        </div>
+
+        <div class="project" data-animate="fade-up">
+          <img src="assets/images/forkify.png" alt="Forkify" />
+          <h3>Forkify</h3>
+          <p>Recipe search and creation application using external API.</p>
+          <a href="https://forkify-sbritobreno.netlify.app/" target="_blank"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" data-animate="fade-up">
+      <h2>Connect</h2>
+
+      <div class="social-links">
+        <a href="https://github.com/sbritobreno" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.instagram.com/sbritobreno/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/sbritobreno/" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+
+      <button id="openModal" class="cta-btn">Send Message</button>
+    </section>
+
+    <!-- CONTACT MODAL -->
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+
+        <h2>Send Message</h2>
+
+        <form id="contactForm">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer>
-      <h2>Breno Brito</h2>
-      <h3>Let's make something great together!</h3>
-      <ul class="footer-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects-session">Portfolio</a></li>
-        <li><a href="./contact/index.html">Contact</a></li>
-      </ul>
-      <ul class="footer-icons">
-        <li>
-          <a href="https://www.linkedin.com/in/sbritobreno/" target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/breno.brito.125" target="_blank"
-            ><i class="fab fa-facebook-square"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://github.com/sbritobreno" target="_blank"
-            ><i class="fab fa-github-square"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/sbritobreno/" target="_blank"
-            ><i class="fab fa-instagram-square"></i
-          ></a>
-        </li>
-      </ul>
-      <p class="privacy"><a href="./privacy.html">Privacy &amp; Legal</a></p>
+      <p>©<span id="year"></span> sbritobreno</p>
+      <p><a href="privacy.html">Privacy & Legal</a></p>
     </footer>
 
-    <script src="assets/js/home.js"></script>
-
     <script
-      src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
-      data-cfasync="false"
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
-
-    <script>
-      window.cookieconsent.initialise({
-        palette: {
-          popup: {
-            background: "#000",
-          },
-          button: {
-            background: "#f1d600",
-          },
-        },
-        content: {
-          href: "https://sbritobreno.github.io/Portfolio/privacy.html",
-        },
-      });
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "I5P2cRw8FIKKFpZeI",
+        });
+      })();
     </script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
