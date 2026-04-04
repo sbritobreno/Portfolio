@@ -1,5 +1,54 @@
-// Set the current year dynamically
+// =====================
+// SET YEAR
+// =====================
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// =====================
+// COOKIE CONSENT + ANALYTICS
+// =====================
+const cookieBanner = document.getElementById("cookieBanner");
+const acceptBtn = document.getElementById("acceptCookies");
+const declineBtn = document.getElementById("declineCookies");
+
+// Load Google Analytics ONLY after consent
+function loadAnalytics() {
+  const script = document.createElement("script");
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-P8PP6STM4N";
+  script.async = true;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  window.gtag = gtag;
+
+  gtag("js", new Date());
+  gtag("config", "G-P8PP6STM4N");
+}
+
+// Check saved choice
+const consent = localStorage.getItem("cookieConsent");
+
+if (consent === "accepted") {
+  cookieBanner.style.display = "none";
+  loadAnalytics();
+} else if (consent === "declined") {
+  cookieBanner.style.display = "none";
+}
+
+// Accept cookies
+acceptBtn.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "accepted");
+  cookieBanner.style.display = "none";
+  loadAnalytics();
+});
+
+// Decline cookies
+declineBtn.addEventListener("click", () => {
+  localStorage.setItem("cookieConsent", "declined");
+  cookieBanner.style.display = "none";
+});
 
 // =====================
 // CONTACT MODAL
@@ -41,7 +90,7 @@ contactForm.addEventListener("submit", function (e) {
 });
 
 // =====================
-// TERMINAL TYPING ANIMATION (keep all lines visible)
+// TERMINAL TYPING ANIMATION
 // =====================
 const commands = [
   { command: "whoami", output: "Breno Brito" },
@@ -53,7 +102,6 @@ const commands = [
 const terminalBody = document.querySelector(".terminal-body");
 
 let commandIndex = 0;
-let charIndex = 0;
 
 function typeNextCommand() {
   if (commandIndex >= commands.length) return;
@@ -75,7 +123,7 @@ function typeNextCommand() {
 
   let commandText = commands[commandIndex].command;
   let outputText = commands[commandIndex].output;
-  charIndex = 0;
+  let charIndex = 0;
 
   function typeCommandChar() {
     if (charIndex < commandText.length) {
@@ -102,11 +150,10 @@ function typeNextCommand() {
   typeCommandChar();
 }
 
-// Start animation
 typeNextCommand();
 
 // =====================
-// SCROLL REVEAL ANIMATION
+// SCROLL REVEAL
 // =====================
 const sections = document.querySelectorAll(".section, .project");
 
@@ -126,13 +173,11 @@ window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
 // =====================
-// HACKER GRID BACKGROUND
+// GRID BACKGROUND
 // =====================
-const canvas = document.createElement("canvas");
-canvas.id = "gridCanvas";
-document.body.appendChild(canvas);
-
+const canvas = document.getElementById("gridCanvas");
 const ctx = canvas.getContext("2d");
+
 let width, height;
 let gridSize = 50;
 
@@ -140,6 +185,7 @@ function resizeCanvas() {
   width = canvas.width = window.innerWidth;
   height = canvas.height = window.innerHeight;
 }
+
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 
@@ -167,4 +213,5 @@ function animateGrid() {
   drawGrid();
   requestAnimationFrame(animateGrid);
 }
+
 animateGrid();
